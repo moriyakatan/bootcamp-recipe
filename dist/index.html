@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text\css" href="style.css">
+    <title>Recipe</title>
+</head>
+<body>
+    
+    <div id="container">
+        <input id="npt" type="text" placeholder="ingredient">
+        <button id="btn" onclick=ingredSearch()>Search!</button>
+    </div>
+
+
+    <div id="ingredient"></div>
+
+    <script id="ingredient-template" type="text/x-handlebars-template">
+        <div class="ingContainer"></div>
+        {{#each ingredient}} 
+            <div class="title">{{title}}</div>
+        
+        
+        {{/each}}
+        
+    </script>
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
